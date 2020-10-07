@@ -1,29 +1,27 @@
 package rolls;
 
-import javax.lang.model.type.NullType;
-
-public class rollFactory {
-    public roll createRoll(String type)
+public class RollFactory {
+    public Roll createRoll(String type)
     {
         if(type.equals("egg"))
         {
-            return new eggRoll();
+            return new EggRoll();
         }
         else if(type.equals("jelly"))
         {
-            return new jellyRoll();
+            return new JellyRoll();
         }
         else if(type.equals("pastry"))
         {
-            return new pastryRoll();
+            return new PastryRoll();
         }
         else if(type.equals("sausage"))
         {
-            return new sausageRoll();
+            return new SausageRoll();
         }
         else if(type.equals("spring"))
         {
-            return new springRoll();
+            return new SpringRoll();
         }
         System.err.println(type+" is not a roll type!");
         return null;

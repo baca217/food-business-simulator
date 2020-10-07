@@ -5,15 +5,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 public class rollTests {
-    private final rollFactory testFactory = new rollFactory();
+    private final RollFactory testFactory = new RollFactory();
 
     @Test
     public void rollInstantiate()
     {
-        assertEquals("eggRoll", testFactory.createRoll("egg").getClass().getSimpleName());
-        assertEquals("jellyRoll", testFactory.createRoll("jelly").getClass().getSimpleName());
-        assertEquals("pastryRoll", testFactory.createRoll("pastry").getClass().getSimpleName());
-        assertEquals("sausageRoll", testFactory.createRoll("sausage").getClass().getSimpleName());
-        assertEquals("springRoll", testFactory.createRoll("spring").getClass().getSimpleName());
+        assertEquals("EggRoll", testFactory.createRoll("egg").getClass().getSimpleName());
+        assertEquals("JellyRoll", testFactory.createRoll("jelly").getClass().getSimpleName());
+        assertEquals("PastryRoll", testFactory.createRoll("pastry").getClass().getSimpleName());
+        assertEquals("SausageRoll", testFactory.createRoll("sausage").getClass().getSimpleName());
+        assertEquals("SpringRoll", testFactory.createRoll("spring").getClass().getSimpleName());
     }
 }
