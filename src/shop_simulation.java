@@ -11,5 +11,7 @@ public class shop_simulation {
         rTest.rollInstantiate();
         sTest.storeInstantiate();
         sTest.storeSell();
+        sTest.storeOpen();
+        sTest.noRollRefill();
     }
 }
