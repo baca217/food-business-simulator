@@ -4,6 +4,8 @@ public class PastryRoll extends Roll
 {
     public PastryRoll()
     {
-        super();
+        type = "Pastry roll";
+        cost = 1.50;
+        description = type;
     }
 }

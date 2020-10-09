@@ -8,7 +8,10 @@ public class shop_simulation {
     {
         rollTests rTest = new rollTests();
         storeTests sTest = new storeTests();
+
         rTest.rollInstantiate();
+        rTest.rollDecorator();
+
         sTest.storeInstantiate();
         sTest.storeSell();
         sTest.storeOpen();

@@ -7,7 +7,7 @@ import java.util.List;
 
 public class ColoradoRollStore extends RollStore
 {
-    private HashMap<String, List<Roll>> rollInventory = new HashMap<String, List<Roll>>();
+    private HashMap<String, List<Roll>> rollInventory = new HashMap<>();
     private String[] rollTypes = {"egg", "jelly", "pastry", "sausage", "spring"};
     private RollFactory rollFactory = new RollFactory();
     private int rollAmount = 30;
@@ -16,8 +16,7 @@ public class ColoradoRollStore extends RollStore
 
     public ColoradoRollStore()
     {
-        int i = 0;
-        for(i = 0; i < this.rollTypes.length; i++)
+        for(int i = 0; i < this.rollTypes.length; i++)
         {
             String type = this.rollTypes[i];
             this.rollInventory.put(type, new ArrayList<Roll>());
@@ -27,7 +26,7 @@ public class ColoradoRollStore extends RollStore
     }
 
 
-    public void startDay()
+    public void startDay() //start day, check inventory,
     {
         int i;
         int j;

@@ -3,6 +3,8 @@ package rolls;
 public class SpringRoll extends Roll {
     public SpringRoll()
     {
-        super();
+        type = "Spring Roll";
+        cost = 2.50;
+        description = type;
     }
 }
