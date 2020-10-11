@@ -1,6 +1,6 @@
 //import customers.*;
 import rolls.*;
-//import shops.*;
+import shops.*;
 import tests.*;
 
 public class shop_simulation {
@@ -8,6 +8,7 @@ public class shop_simulation {
     {
         rollTests rTest = new rollTests();
         storeTests sTest = new storeTests();
+        ColoradoRollStore myStore = new ColoradoRollStore();
 
         rTest.rollInstantiate();
         rTest.rollDecorator();
@@ -16,5 +17,10 @@ public class shop_simulation {
         sTest.storeSell();
         sTest.storeOpen();
         sTest.noRollRefill();
+        sTest.storeInput();
+        sTest.storeExtras();
+
+        myStore.startDay();
+        myStore.printInventory();
     }
 }

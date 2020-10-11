@@ -1,6 +1,6 @@
 package rolls;
 
-public class Topping
+public class Topping extends RollDecorator
 {
     Roll roll;
 
