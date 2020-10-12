@@ -31,7 +31,7 @@ abstract public class Customer {
         }
     }
 
-    public abstract List<String> rollOrders(RollStore rollStore);
+    public abstract List<String> rollOrders();
 
     public String addToppings(){
         Random rand = new Random();
