@@ -1,4 +1,5 @@
 package customers;
+import shops.*;
 
 import rolls.EggRoll;
 import rolls.JellyRoll;
@@ -12,6 +13,8 @@ import java.util.List;
 import java.util.Random;
 
 abstract public class Customer {
+    protected RollStore myStore;
+
     List<String> rollOptions = new ArrayList<>() {{
         add("EggRoll");
         add("JellyRoll");
@@ -19,6 +22,16 @@ abstract public class Customer {
         add("SausageRoll");
         add("SpringRoll");
     }};
+
+    public void goToStore(RollStore tempStore)
+    {
+        if(tempStore.isStoreOpen())
+        {
+            myStore = tempStore;
+        }
+    }
+
+    public abstract void placeOrder();
 
     public abstract List<String> rollOrders();
 
