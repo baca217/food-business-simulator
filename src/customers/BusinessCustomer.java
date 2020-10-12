@@ -15,7 +15,7 @@ public class BusinessCustomer extends Customer {
                 order.add(roll);
             }
         }
-        
+
         return order;
     }
 }
