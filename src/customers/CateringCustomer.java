@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class CateringCustomer extends Customer {
     @Override
-    public List<Roll> rollOrders() {
+    public List<String> rollOrders() {
         List<Integer> randomNumbers = new ArrayList<>();
         List<String> order = new ArrayList<>();
         Random rand = new Random();
@@ -23,6 +23,7 @@ public class CateringCustomer extends Customer {
             randomNumbers.remove(rollNum);
             for(int j = 0; j < 5; j++) {
                 String individualOrder = rollOptions.get(rollNum) + "," + addToppings();
+                order.add(individualOrder);
             }
         }
 

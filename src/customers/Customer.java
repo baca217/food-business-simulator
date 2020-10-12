@@ -20,7 +20,7 @@ abstract public class Customer {
         add("SpringRoll");
     }};
 
-    public abstract List<Roll> rollOrders();
+    public abstract List<String> rollOrders();
 
     public String addToppings(){
         Random rand = new Random();
