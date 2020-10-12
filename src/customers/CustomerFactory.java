@@ -18,7 +18,7 @@ public class CustomerFactory
         }
         else
         {
-            System.out.println(type+" is now a know customer type");
+            System.out.println(type+" is not a known customer type");
             return null;
         }
     }
