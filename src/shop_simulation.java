@@ -1,9 +1,5 @@
 //import customers.*;
-import customers.Business;
-import customers.Casual;
-import customers.Catering;
 import customers.Customer;
-import rolls.*;
 import shops.*;
 import tests.*;
 

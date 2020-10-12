@@ -6,15 +6,15 @@ public class CustomerFactory
     {
         if(type.equals("casual"))
         {
-            return new Casual();
+            return new CasualCustomer();
         }
         else if(type.equals("business"))
         {
-            return new Business();
+            return new BusinessCustomer();
         }
         else if(type.equals("catering"))
         {
-            return new Casual();
+            return new CasualCustomer();
         }
         else
         {
