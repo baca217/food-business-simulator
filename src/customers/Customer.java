@@ -1,12 +1,37 @@
 package customers;
+import shops.*;
+
+import rolls.EggRoll;
+import rolls.JellyRoll;
+import rolls.PastryRoll;
+import rolls.Roll;
+import rolls.SausageRoll;
+import rolls.SpringRoll;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 abstract public class Customer {
+    protected RollStore myStore;
 
-    public abstract List<String> rollOrders(List<String> rollOptions);
+    List<String> rollOptions = new ArrayList<>() {{
+        add("egg");
+        add("jelly");
+        add("pastry");
+        add("sausage");
+        add("spring");
+    }};
+
+    public void goToStore(RollStore tempStore)
+    {
+        if(tempStore.isStoreOpen())
+        {
+            myStore = tempStore;
+        }
+    }
+
+    public abstract List<String> rollOrders(RollStore rollStore);
 
     public String addToppings(){
         Random rand = new Random();
@@ -32,4 +57,5 @@ abstract public class Customer {
         order.deleteCharAt(order.length() - 1);
         return order.toString();
     }
+
 }

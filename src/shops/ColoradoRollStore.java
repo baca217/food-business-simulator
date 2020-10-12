@@ -9,18 +9,12 @@ import java.beans.PropertyChangeSupport;
 
 public class ColoradoRollStore extends RollStore
 {
-    private HashMap<String, List<Roll>> rollInventory = new HashMap<>();
-    private String[] rollTypes = {"egg", "jelly", "pastry", "sausage", "spring"};
-    private String[] rollExtras = {"extra sauce", "extra filling", "extra topping"};
-    private List<String> rollMenu = new ArrayList<>();
-    private RollFactory rollFactory = new RollFactory();
-    private int rollAmount = 30;
-    private int noRolls;
-    private boolean open;
-    private PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     public ColoradoRollStore()
     {
+        this.rollTypes = new String[]{"egg", "jelly", "pastry", "sausage", "spring"};
+        this.rollExtras = new String[]{"extra sauce", "extra filling", "extra topping"};
+        this.rollAmount = 30;
         for(int i = 0; i < this.rollTypes.length; i++)
         {
             String type = this.rollTypes[i];
@@ -138,31 +132,5 @@ public class ColoradoRollStore extends RollStore
         return roll;
     }
 
-    public void addPropertyChangeListener(PropertyChangeListener pcl)
-    {
-        support.addPropertyChangeListener(pcl);
-    }
 
-    public int getInventory(String type)
-    {
-        return rollInventory.get(type).size();
-    }
-
-    public void printInventory()
-    {
-        for(String type: rollTypes)
-        {
-            System.out.println(type+" roll amount: "+getInventory(type));
-        }
-    }
-
-    public boolean isStoreOpen()
-    {
-        return  this.open;
-    }
-
-    public List<String> menu()
-    {
-        return this.rollMenu;
-    }
 }
