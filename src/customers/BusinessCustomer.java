@@ -11,7 +11,7 @@ public class BusinessCustomer extends Customer {
     public List<String> rollOrders() {
         List<String> order = new ArrayList<>();
 
-        if(getNumberOfAvailable() == -1) return null;
+        if(getNumberOfAvailable() == -1) return new ArrayList<>();
 
         for(String roll : rollOptions) {
             for(int i = 0; i < 2; i++) {

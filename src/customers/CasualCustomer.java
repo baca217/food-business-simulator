@@ -11,10 +11,10 @@ public class CasualCustomer extends Customer{
         List<String> order = new ArrayList<>();
         int rollOrderSize;
         int availableRolls = getNumberOfAvailable();
-        if(availableRolls < 3) {
+        rollOrderSize = rand.nextInt(3) + 1;
+
+        if(availableRolls < rollOrderSize) {
             rollOrderSize = availableRolls;
-        } else {
-            rollOrderSize = rand.nextInt(3) + 1;
         }
 
         int i = 0;
