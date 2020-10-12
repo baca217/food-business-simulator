@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Casual extends Customer{
+public class CasualCustomer extends Customer{
 
     @Override
     public List<Roll> rollOrders() {
@@ -17,7 +17,7 @@ public class Casual extends Customer{
             int rollToOrder = rand.nextInt(rollOptions.size());
             order.add(rollOptions.get(rollToOrder));
         }
-        
+
         return order;
     }
 }
