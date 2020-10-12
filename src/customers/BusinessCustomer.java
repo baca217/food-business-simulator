@@ -12,7 +12,8 @@ public class BusinessCustomer extends Customer {
 
         for(String roll : rollOptions) {
             for(int i = 0; i < 2; i++) {
-                order.add(roll);
+                String individualOrder = roll + "," + addToppings();
+                order.add(individualOrder);
             }
         }
 
