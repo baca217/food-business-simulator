@@ -29,13 +29,4 @@ public class CasualCustomer extends Customer{
         return order;
     }
 
-    public int getNumberOfAvailable() {
-        int count = 0;
-        List<String> menu = myStore.menu();
-        for (String s : menu) {
-            count += myStore.getInventory(s);
-        }
-
-        return count;
-    }
 }

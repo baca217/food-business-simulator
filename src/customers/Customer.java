@@ -31,6 +31,16 @@ abstract public class Customer {
         }
     }
 
+    public int getNumberOfAvailable() {
+        int count = 0;
+        List<String> menu = myStore.menu();
+        for (String s : menu) {
+            count += myStore.getInventory(s);
+        }
+
+        return count;
+    }
+
     public abstract List<String> rollOrders();
 
     public String addToppings(){

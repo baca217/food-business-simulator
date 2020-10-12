@@ -11,6 +11,8 @@ public class BusinessCustomer extends Customer {
     public List<String> rollOrders() {
         List<String> order = new ArrayList<>();
 
+        if(getNumberOfAvailable() == -1) return null;
+
         for(String roll : rollOptions) {
             for(int i = 0; i < 2; i++) {
                 String individualOrder = roll + "," + addToppings();
@@ -19,6 +21,21 @@ public class BusinessCustomer extends Customer {
         }
 
         return order;
+    }
+
+    @Override
+    public int getNumberOfAvailable() {
+        int count = 0;
+        List<String> menu = myStore.menu();
+        for (String s : menu) {
+            if(myStore.getInventory(s) < 2) {
+                return -1;
+            }
+
+            count++;
+        }
+
+        return count;
     }
 
 }

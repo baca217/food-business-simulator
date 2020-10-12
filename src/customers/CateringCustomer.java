@@ -56,7 +56,6 @@ public class CateringCustomer extends Customer {
                 if(addedCount == 15) break;
 
             }
-            // THIS IS BALLS
             else if(myStore.getInventory(rollOptions.get(rollNum)) >= 5) {
                 for(int j = 0; j < 5; j++) {
                     individualOrder = rollOptions.get(rollNum) + "," + addToppings();
