@@ -9,7 +9,7 @@ import java.util.Random;
 public class CasualCustomer extends Customer{
 
     @Override
-    public List<String> rollOrders() {
+    public List<String> rollOrders(List<String> rollOptions) {
         Random rand = new Random();
         List<String> order = new ArrayList<>();
 

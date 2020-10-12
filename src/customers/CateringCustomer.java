@@ -9,10 +9,8 @@ import java.util.Random;
 
 public class CateringCustomer extends Customer {
 
-
-
     @Override
-    public List<String> rollOrders() {
+    public List<String> rollOrders(List<String> rollOptions) {
         List<Integer> randomNumbers = new ArrayList<>();
         List<String> order = new ArrayList<>();
         Random rand = new Random();

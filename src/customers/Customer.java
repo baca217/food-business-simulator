@@ -1,26 +1,12 @@
 package customers;
 
-import rolls.EggRoll;
-import rolls.JellyRoll;
-import rolls.PastryRoll;
-import rolls.Roll;
-import rolls.SausageRoll;
-import rolls.SpringRoll;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 abstract public class Customer {
-    List<String> rollOptions = new ArrayList<>() {{
-        add("EggRoll");
-        add("JellyRoll");
-        add("PastryRoll");
-        add("SausageRoll");
-        add("SpringRoll");
-    }};
 
-    public abstract List<String> rollOrders();
+    public abstract List<String> rollOrders(List<String> rollOptions);
 
     public String addToppings(){
         Random rand = new Random();
@@ -46,5 +32,4 @@ abstract public class Customer {
         order.deleteCharAt(order.length() - 1);
         return order.toString();
     }
-
 }
