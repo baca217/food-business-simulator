@@ -24,18 +24,41 @@ public class CateringCustomer extends Customer {
             randomNumbers.remove(rollNum);
             List<String> inventory = rollStore.menu();
             int zeroCount = 0;
+            int fiveCount = 0;
 
             for(String item : inventory) {
                 if(rollStore.getInventory(item) == 0) {
                     zeroCount++;
                 }
+
+                if(rollStore.getInventory(item) >= 5) {
+                    fiveCount++;
+                }
             }
 
-            if(zeroCount == )
+            if(zeroCount == inventory.size()) return null;
+            int addedCount = 0;
+            String individualOrder;
 
-            if(rollStore.getInventory(rollOptions.get(rollNum)) >= 5) {
+            if(fiveCount < 3) {
+                for(String item : inventory) {
+                    int itemsAvailable = rollStore.getInventory(item);
+                    if(itemsAvailable > 0) {
+                        for(int j = 0; j < itemsAvailable; j++) {
+                            if(addedCount == 15) break;
+                            individualOrder = item + "," + addToppings();
+                            order.add(individualOrder);
+                            addedCount++;
+                        }
+                    }
+                }
+
+                if(addedCount == 15) break;
+            }
+            // THIS IS BALLS
+            else if(rollStore.getInventory(rollOptions.get(rollNum)) >= 5) {
                 for(int j = 0; j < 5; j++) {
-                    String individualOrder = rollOptions.get(rollNum) + "," + addToppings();
+                    individualOrder = rollOptions.get(rollNum) + "," + addToppings();
                     order.add(individualOrder);
                 }
                 i++;
