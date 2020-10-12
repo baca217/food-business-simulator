@@ -1,4 +1,7 @@
 //import customers.*;
+import customers.BusinessCustomer;
+import customers.CasualCustomer;
+import customers.CateringCustomer;
 import customers.Customer;
 import shops.*;
 import tests.*;
@@ -37,17 +40,17 @@ public class shop_simulation {
         customerAmount  = rand.nextInt(casualUpper) + 1; //casual customer generation
         for(i = 0; i < customerAmount; i++)
         {
-            customers.add(new Casual());
+            customers.add(new CasualCustomer());
         }
         customerAmount = rand.nextInt(otherUpper) + 1;//business customer generation
         for(i = 0; i < customerAmount; i++)
         {
-            customers.add(new Business());
+            customers.add(new BusinessCustomer());
         }
         customerAmount = rand.nextInt(otherUpper) + 1;//catering customer generation
         for(i = 0; i < customerAmount; i++)
         {
-            customers.add(new Catering());
+            customers.add(new CateringCustomer());
         }
 
         for(i = 0; i < days; i++)
