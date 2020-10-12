@@ -11,7 +11,7 @@ public class CateringCustomer extends Customer {
     @Override
     public List<Roll> rollOrders() {
         List<Integer> randomNumbers = new ArrayList<>();
-        List<Roll> order = new ArrayList<>();
+        List<String> order = new ArrayList<>();
         Random rand = new Random();
 
         for(int i = 0; i < rollOptions.size(); i++) {
@@ -22,10 +22,10 @@ public class CateringCustomer extends Customer {
             int rollNum = rand.nextInt(randomNumbers.size());
             randomNumbers.remove(rollNum);
             for(int j = 0; j < 5; j++) {
-                order.add(rollOptions.get(rollNum));
+                String individualOrder = rollOptions.get(rollNum) + "," + addToppings();
             }
         }
-        
+
         return order;
     }
 }
