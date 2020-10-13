@@ -3,6 +3,7 @@ import rolls.*;
 
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.beans.PropertyChangeSupport;
@@ -12,16 +13,14 @@ public class ColoradoRollStore extends RollStore
 
     public ColoradoRollStore()
     {
-        this.rollTypes = new String[]{"egg", "jelly", "pastry", "sausage", "spring"};
-        this.rollExtras = new String[]{"extra sauce", "extra filling", "extra topping"};
+        this.rollTypes = Arrays.asList("egg roll", "jelly roll", "pastry roll", "sausage roll", "spring roll");
+        this.rollExtras = Arrays.asList("extra sauce", "extra filling", "extra topping");
         this.rollAmount = 30;
-        for(int i = 0; i < this.rollTypes.length; i++)
+        for(String type: this.rollTypes)
         {
-            String type = this.rollTypes[i];
-            rollMenu.add(type+" roll");
-            this.rollInventory.put(type, new ArrayList<Roll>());
+            this.rollInventory.put(type, new ArrayList<>());
         }
-        this.noRolls = 5;
+        this.noRolls = this.rollTypes.size();
         this.open = false;
     }
 
@@ -30,9 +29,9 @@ public class ColoradoRollStore extends RollStore
     {
         int i;
         int j;
-        for(i = 0; i < this.rollTypes.length; i++)
+        for(i = 0; i < this.rollTypes.size(); i++)
         {
-            String type = this.rollTypes[i];
+            String type = this.rollTypes.get(i);
             if(this.rollInventory.get(type).size() == 0) { //check if inventory refill is needed
                 for (j = 0; j < this.rollAmount; j++) { //refill roll inventory
                     Roll tempRoll = this.rollFactory.createRoll(type);
@@ -44,6 +43,7 @@ public class ColoradoRollStore extends RollStore
                 }
                 this.noRolls--;
             }
+            support.firePropertyChange("open", false, true);
         }
         this.open = true;
     }
@@ -113,7 +113,7 @@ public class ColoradoRollStore extends RollStore
         String rollType = arrOfOrder[0];
         Roll roll;
 
-        if (this.noRolls == 5) //check if we need to close the store
+        if (this.noRolls == this.rollTypes.size()) //check if we need to close the store
         {
             System.out.println("The store is out of rolls! we will close.");
             this.open = false;

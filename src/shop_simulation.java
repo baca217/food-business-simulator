@@ -7,6 +7,7 @@ import shops.*;
 import tests.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -15,8 +16,11 @@ public class shop_simulation {
     {
         rollTests rTest = new rollTests();
         storeTests sTest = new storeTests();
+        customerTests cTest = new customerTests();
+
         ColoradoRollStore myStore = new ColoradoRollStore();
         List<Customer> customers = new ArrayList<>();
+        List<Customer> customerTypes = Arrays.asList(new CasualCustomer(), new BusinessCustomer(), new CateringCustomer());
         int days = 30;
         int i;
         int j;
@@ -24,7 +28,12 @@ public class shop_simulation {
         int customerAmount;
         int casualUpper = 12;
         int otherUpper = 3;
+        List<Integer> bounds = Arrays.asList(casualUpper, otherUpper, otherUpper);
 
+        //cTest.customerOrderTest();
+        cTest.failOrderTest();
+
+        /*
         rTest.rollInstantiate();
         rTest.rollDecorator();
 
@@ -37,20 +46,15 @@ public class shop_simulation {
 
         myStore.startDay();
 
-        customerAmount  = rand.nextInt(casualUpper) + 1; //casual customer generation
-        for(i = 0; i < customerAmount; i++)
+        for(i = 0; i < bounds.size(); i++) //creating random customers
         {
-            customers.add(new CasualCustomer());
-        }
-        customerAmount = rand.nextInt(otherUpper) + 1;//business customer generation
-        for(i = 0; i < customerAmount; i++)
-        {
-            customers.add(new BusinessCustomer());
-        }
-        customerAmount = rand.nextInt(otherUpper) + 1;//catering customer generation
-        for(i = 0; i < customerAmount; i++)
-        {
-            customers.add(new CateringCustomer());
+            int boundSize = bounds.get(i);
+            Customer type = customerTypes.get(i);
+            customerAmount = rand.nextInt(boundSize) + 1;
+            for(j = 0; j < customerAmount; j++) //creating certain amounts of each customer
+            {
+                customers.add(type);
+            }
         }
 
         for(i = 0; i < days; i++)
@@ -59,5 +63,6 @@ public class shop_simulation {
             System.out.println("day :"+ (i + 1));
             myStore.printInventory();
         }
+         */
     }
 }

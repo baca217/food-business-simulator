@@ -11,12 +11,11 @@ public abstract class RollStore
 {
     protected int noRolls;
     protected int rollAmount;
-    protected String[] rollTypes;
-    protected String[] rollExtras;
+    protected List<String> rollTypes;
+    protected List<String> rollExtras;
     protected HashMap<String, List<Roll>> rollInventory = new HashMap<>();
     protected RollFactory rollFactory = new RollFactory();
     protected boolean open;
-    protected List<String> rollMenu = new ArrayList<>();
     protected PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     protected abstract void startDay();
@@ -30,7 +29,7 @@ public abstract class RollStore
 
     public List<String> menu()
     {
-        return this.rollMenu;
+        return this.rollTypes;
     }
 
     public void addPropertyChangeListener(PropertyChangeListener pcl)

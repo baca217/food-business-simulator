@@ -8,14 +8,14 @@ import java.util.List;
 
 public class BusinessCustomer extends Customer {
     @Override
-    public List<String> rollOrders() {
+    public List<String> rollOrders(RollStore myStore) {
         List<String> order = new ArrayList<>();
 
-        if(getNumberOfAvailable() == -1) return new ArrayList<>();
+        if(getNumberOfAvailable(myStore) == -1) return new ArrayList<>();
 
-        for(String roll : rollOptions) {
+        for(String roll : myStore.menu()) {
             for(int i = 0; i < 2; i++) {
-                String individualOrder = roll + "," + addToppings();
+                String individualOrder = roll + addToppings();
                 order.add(individualOrder);
             }
         }
@@ -24,7 +24,7 @@ public class BusinessCustomer extends Customer {
     }
 
     @Override
-    public int getNumberOfAvailable() {
+    public int getNumberOfAvailable(RollStore myStore) {
         int count = 0;
         List<String> menu = myStore.menu();
         for (String s : menu) {

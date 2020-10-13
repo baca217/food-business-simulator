@@ -1,5 +1,7 @@
 package customers;
 
+import shops.RollStore;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,58 +9,58 @@ import java.util.Random;
 public class CateringCustomer extends Customer {
 
     @Override
-    public List<String> rollOrders() {
-        List<Integer> randomNumbers = new ArrayList<>();
+    public List<String> rollOrders(RollStore myStore) {
         List<String> order = new ArrayList<>();
         Random rand = new Random();
-
-        for(int i = 0; i < rollOptions.size(); i++) {
-            randomNumbers.add(i);
-        }
+        List<String> menu = myStore.menu();
+        int menuSize = menu.size();
         int i = 0;
-        while(i < 3) {
-            int rollNum = rand.nextInt(randomNumbers.size());
-            randomNumbers.remove(rollNum);
-            List<String> inventory = myStore.menu();
-            int zeroCount = 0;
-            int fiveCount = 0;
-            // Make sure the Inventory has enough items in it.
-            for(String item : inventory) {
-                if(myStore.getInventory(item) == 0) {
-                    zeroCount++;
-                }
+        int zeroCount = 0;
+        int fiveCount = 0;
 
-                if(myStore.getInventory(item) >= 5) {
-                    fiveCount++;
-                }
+        // Make sure the Inventory has enough items in it.
+        for(String item : menu) {
+            if(myStore.getInventory(item) == 0) {
+                zeroCount++;
             }
 
-            if(zeroCount == inventory.size()) return null;
-            int addedCount = 0;
-            String individualOrder;
+            if(myStore.getInventory(item) >= 5) {
+                fiveCount++;
+            }
+        }
 
-            if(fiveCount < 3) {
-                for(String item : inventory) {
-                    int itemsAvailable = myStore.getInventory(item);
-                    if(itemsAvailable > 0) {
-                        for(int j = 0; j < itemsAvailable; j++) {
-                            if(addedCount == 15) break;
-                            individualOrder = item + "," + addToppings();
-                            order.add(individualOrder);
-                            addedCount++;
-                        }
+        if(zeroCount == menu.size()) return null; //no roll inventory in store
+        String individualOrder;
+
+        if(fiveCount < 3) //wasn't 3 or more roll types with inventory greater than 5
+        {
+            for(String item : menu)
+            {
+                int itemsAvailable = myStore.getInventory(item);
+                if(itemsAvailable > 0) { //there is a roll amount available
+                    for(int j = 0; j < itemsAvailable; j++)
+                    {
+                        individualOrder = item + addToppings();
+                        order.add(individualOrder);
+                        if(order.size() == 15) break; //fulfilled order with rolls going through menu
                     }
                 }
-
-                if(addedCount == 15) break;
-
+                if(order.size() == 15) break; //fulfilled order with rolls going through menu
             }
-            else if(myStore.getInventory(rollOptions.get(rollNum)) >= 5) {
-                for(int j = 0; j < 5; j++) {
-                    individualOrder = rollOptions.get(rollNum) + "," + addToppings();
-                    order.add(individualOrder);
+        }
+        else
+        {
+            while(i < 3)
+            {
+                int rollNum = rand.nextInt(menuSize);
+                if (myStore.getInventory(menu.get(rollNum)) >= 5)
+                {
+                    for (int j = 0; j < 5; j++) {
+                        individualOrder = menu.get(rollNum) + addToppings();
+                        order.add(individualOrder);
+                    }
+                    i++;
                 }
-                i++;
             }
         }
 

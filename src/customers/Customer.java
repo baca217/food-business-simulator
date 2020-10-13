@@ -8,30 +8,16 @@ import rolls.Roll;
 import rolls.SausageRoll;
 import rolls.SpringRoll;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-abstract public class Customer {
-    protected RollStore myStore;
+abstract public class Customer implements PropertyChangeListener {
+    protected boolean isStoreOpen = false;
 
-    List<String> rollOptions = new ArrayList<>() {{
-        add("egg");
-        add("jelly");
-        add("pastry");
-        add("sausage");
-        add("spring");
-    }};
-
-    public void goToStore(RollStore tempStore)
-    {
-        if(tempStore.isStoreOpen())
-        {
-            myStore = tempStore;
-        }
-    }
-
-    public int getNumberOfAvailable() {
+    public int getNumberOfAvailable(RollStore myStore) {
         int count = 0;
         List<String> menu = myStore.menu();
         for (String s : menu) {
@@ -41,7 +27,19 @@ abstract public class Customer {
         return count;
     }
 
-    public abstract List<String> rollOrders();
+    public abstract List<String> rollOrders(RollStore myStore);
+
+    public List<String> arriveAndOrder(RollStore myStore)
+    {
+        if(isStoreOpen)
+        {
+            return rollOrders(myStore);
+        }
+        else
+        {
+            return null;
+        }
+    }
 
     public String addToppings(){
         Random rand = new Random();
@@ -53,19 +51,30 @@ abstract public class Customer {
 
         if(randomNum1 < 45) {
             randAmount = rand.nextInt(3);
-            order.append("extra sauce,".repeat(randAmount));
+            order.append(", extra sauce".repeat(randAmount));
         }
 
         if(randomNum2 > 35 && randomNum2 < 75) {
-            order.append("extra fillings,");
+            order.append(", extra fillings");
         }
 
         if(randomNum3 > 65) {
             randAmount = rand.nextInt(2);
-            order.append("extra toppings,".repeat(randAmount));
+            order.append(", extra toppings".repeat(randAmount));
         }
-        order.deleteCharAt(order.length() - 1);
         return order.toString();
+    }
+
+    public void propertyChange(PropertyChangeEvent evt)
+    {
+        switch (evt.getPropertyName())
+        {
+            case "open":
+                isStoreOpen = (boolean) evt.getNewValue();
+                break;
+            default:
+                System.out.println(evt.getPropertyName()+" is an unsupported event");
+        }
     }
 
 }
