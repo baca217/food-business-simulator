@@ -31,7 +31,8 @@ public class shop_simulation {
         List<Integer> bounds = Arrays.asList(casualUpper, otherUpper, otherUpper);
 
         //cTest.customerOrderTest();
-        cTest.failOrderTest();
+        //cTest.failOrderTest();
+        sTest.customerOrders();
 
         /*
         rTest.rollInstantiate();

@@ -14,8 +14,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-abstract public class Customer implements PropertyChangeListener {
+abstract public class Customer implements PropertyChangeListener
+{
     protected boolean isStoreOpen = false;
+    List<Roll> myRolls;
 
     public int getNumberOfAvailable(RollStore myStore) {
         int count = 0;
@@ -27,7 +29,7 @@ abstract public class Customer implements PropertyChangeListener {
         return count;
     }
 
-    public abstract List<String> rollOrders(RollStore myStore);
+    protected abstract List<String> rollOrders(RollStore myStore);
 
     public List<String> arriveAndOrder(RollStore myStore)
     {
@@ -39,6 +41,11 @@ abstract public class Customer implements PropertyChangeListener {
         {
             return null;
         }
+    }
+
+    public void receiveOrder(List<Roll> rollOrder)
+    {
+        myRolls = rollOrder;
     }
 
     public String addToppings(){
@@ -55,12 +62,12 @@ abstract public class Customer implements PropertyChangeListener {
         }
 
         if(randomNum2 > 35 && randomNum2 < 75) {
-            order.append(", extra fillings");
+            order.append(", extra filling");
         }
 
         if(randomNum3 > 65) {
             randAmount = rand.nextInt(2);
-            order.append(", extra toppings".repeat(randAmount));
+            order.append(", extra topping".repeat(randAmount));
         }
         return order.toString();
     }

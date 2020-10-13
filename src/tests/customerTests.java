@@ -26,19 +26,19 @@ public class customerTests
         testStore.startDay();
 
         System.out.println("business customer:--------------------");
-        for(String order: businessCustomer.rollOrders(testStore))
+        for(String order: businessCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }
 
         System.out.println("catering customer:--------------------");
-        for(String order: cateringCustomer.rollOrders(testStore))
+        for(String order: cateringCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }
 
         System.out.println("casual customer:--------------------");
-        for(String order: casualCustomer.rollOrders(testStore))
+        for(String order: casualCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }
@@ -58,7 +58,7 @@ public class customerTests
             testStore.getRoll("egg roll");
         }
         System.out.println("business customer:--------------------");
-        for(String order: businessCustomer.rollOrders(testStore))
+        for(String order: businessCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }
@@ -80,7 +80,7 @@ public class customerTests
         }
 
         System.out.println("casual customer:--------------------");
-        for(String order: casualCustomer.rollOrders(testStore))
+        for(String order: casualCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }
@@ -96,7 +96,7 @@ public class customerTests
         }
 
         System.out.println("cater customer:--------------------");
-        for(String order: cateringCustomer.rollOrders(testStore))
+        for(String order: cateringCustomer.arriveAndOrder(testStore))
         {
             System.out.println(order);
         }

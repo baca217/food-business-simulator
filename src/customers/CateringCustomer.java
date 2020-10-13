@@ -9,7 +9,7 @@ import java.util.Random;
 public class CateringCustomer extends Customer {
 
     @Override
-    public List<String> rollOrders(RollStore myStore) {
+    protected List<String> rollOrders(RollStore myStore) {
         List<String> order = new ArrayList<>();
         Random rand = new Random();
         List<String> menu = myStore.menu();

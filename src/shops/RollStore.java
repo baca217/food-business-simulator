@@ -50,5 +50,5 @@ public abstract class RollStore
         }
     }
 
-    public abstract Roll rollOrder(String order);
+    public abstract List<Roll> rollOrders(List<String> order);
 }

@@ -107,29 +107,32 @@ public class ColoradoRollStore extends RollStore
         return curRoll;
     }
 
-    public Roll rollOrder(String order)
+    public List<Roll> rollOrders(List<String> orderList)
     {
-        String [] arrOfOrder = order.split(",");
-        String rollType = arrOfOrder[0];
-        Roll roll;
-
-        if (this.noRolls == this.rollTypes.size()) //check if we need to close the store
+        List<Roll> rolls = new ArrayList<>();
+        for(String order: orderList)
         {
-            System.out.println("The store is out of rolls! we will close.");
-            this.open = false;
-            support.firePropertyChange("open", false, true);
-            return null;
-        }
+            String[] arrOfOrder = order.split(",");
+            String rollType = arrOfOrder[0];
+            Roll roll;
 
-        roll = identifyAndGetRoll(rollType.split(" ")[0]);
-        if(roll != null)
-        {
-            for (int i = 1; i < arrOfOrder.length; i++)
+            if (this.noRolls == this.rollTypes.size()) //check if we need to close the store
             {
-                roll = rollExtra(roll, arrOfOrder[i]);
+                System.out.println("The store is out of rolls! we will close.");
+                this.open = false;
+                support.firePropertyChange("open", false, true);
+                return rolls;
             }
+
+            roll = identifyAndGetRoll(rollType);
+            if (roll != null) {
+                for (int i = 1; i < arrOfOrder.length; i++) {
+                    roll = rollExtra(roll, arrOfOrder[i]);
+                }
+            }
+            rolls.add(roll);
         }
-        return roll;
+        return rolls;
     }
 
 

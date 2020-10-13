@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class CasualCustomer extends Customer{
     @Override
-    public List<String> rollOrders(RollStore myStore) {
+    protected List<String> rollOrders(RollStore myStore) {
         Random rand = new Random();
         List<String> rollOptions = myStore.menu();
         List<String> order = new ArrayList<>();

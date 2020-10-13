@@ -1,10 +1,13 @@
 package tests;
+import customers.BusinessCustomer;
 import shops.*;
 import rolls.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.event.ListDataEvent;
+import java.util.Arrays;
 import java.util.List;
 
 public class storeTests
@@ -33,7 +36,7 @@ public class storeTests
         for(i = 0; i < 30; i++)
         {
             assertEquals(30 - i, test.getInventory("egg"));
-            test.rollOrder("egg roll");
+            test.rollOrders(Arrays.asList("egg roll"));
         }
     }
 
@@ -51,10 +54,10 @@ public class storeTests
             String type = menu.get(j);
             for (i = 0; i < 30; i++)
             {
-                test.rollOrder(type);
+                test.rollOrders(Arrays.asList(type));
             }
         }
-        test.rollOrder("egg roll");
+        test.rollOrders(Arrays.asList("egg roll"));
         assertEquals(false, test.isStoreOpen());
     }
 
@@ -74,16 +77,40 @@ public class storeTests
     public void storeInput()
     {
         System.out.println("\nstoreInput test");
-        test.rollOrder("this, is, my, order");
-        test.rollOrder("");
+        test.rollOrders(Arrays.asList("this, is, my, order"));
+        test.rollOrders(Arrays.asList(""));
     }
 
     @Test
     public void storeExtras()
     {
         System.out.println("\nstoreExtras test");
+        List<Roll> testRoll = test.rollOrders(Arrays.asList("egg roll, extra cream, extra topping, extra sauce, extra filling"));
+        for(Roll thisRoll: testRoll)
+        {
+            System.out.println(thisRoll.getDescription());
+        }
 
-        Roll testRoll = test.rollOrder("egg roll, extra cream, extra topping, extra sauce, extra filling");
-        System.out.println(testRoll.getDescription());
+    }
+
+    @Test
+    public void customerOrders()
+    {
+        BusinessCustomer bTest = new BusinessCustomer();
+        test.addPropertyChangeListener(bTest);
+        test.startDay();
+        List<String> order = bTest.arriveAndOrder(test);
+        List<Roll> rolls = test.rollOrders(order);
+        System.out.println("order from customer-------------------------");
+        for(String item: order)
+        {
+            System.out.println(item);
+        }
+        System.out.println("received from store-------------------------");
+        for(Roll roll: rolls)
+        {
+            System.out.println(roll.getDescription());
+        }
+        test.printInventory();
     }
 }

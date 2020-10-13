@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BusinessCustomer extends Customer {
     @Override
-    public List<String> rollOrders(RollStore myStore) {
+    protected List<String> rollOrders(RollStore myStore) {
         List<String> order = new ArrayList<>();
 
         if(getNumberOfAvailable(myStore) == -1) return new ArrayList<>();
