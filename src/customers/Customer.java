@@ -82,6 +82,13 @@ abstract public class Customer implements PropertyChangeListener
         for(String type: rollTypes)
         {
             System.out.println(type+" amount: "+temp.get(type));
+            for(Roll roll: myRolls)
+            {
+                if(roll.getRollType().equals(type))
+                {
+                    System.out.println(roll.getDescription());
+                }
+            }
         }
         System.out.println("Total cost: $"+cost);
     }

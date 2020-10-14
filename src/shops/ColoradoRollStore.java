@@ -128,7 +128,7 @@ public class ColoradoRollStore extends RollStore
             {
                 System.out.println("The store is out of rolls! we will close.");
                 this.open = false;
-                support.firePropertyChange("open", false, true);
+                support.firePropertyChange("open", true, false);
                 return rolls;
             }
 

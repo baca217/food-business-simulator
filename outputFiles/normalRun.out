@@ -1,0 +1,2325 @@
+^^^^^Roll instantiation test succeeded^^^^^^^^^^
+^^^^^Roll Decorator test succeeded^^^^^^^^^^
+^^^^^Store ordering test passed^^^^^
+^^^^^Store decorator test passed^^^^^
+------------------------------------------------------------
+day :1
+^^^^^Test for correct customer instantiation^^^^^
+^^^^^PCL test for store succeeded^^^^^
+^^^^^First store inventory check succeeded^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Total cost: $2.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Egg roll amount: 1
+Egg roll
+Sausage roll amount: 1
+Sausage roll
+Total cost: $4.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling, extra topping
+Pastry roll amount: 1
+Pastry roll, extra filling, extra topping
+Total cost: $3.0
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll
+Jelly roll amount: 2
+Jelly roll
+Jelly roll, extra filling
+Pastry roll amount: 2
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra sauce
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra sauce, extra filling
+Total cost: $16.85
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra topping
+Total cost: $1.8
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra sauce, extra filling
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll, extra filling
+Total cost: $17.45
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Total cost: $2.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Pastry roll amount: 1
+Pastry roll, extra sauce
+Total cost: $3.75
+*********STORE INVENTORY:*************
+egg roll amount: 24
+jelly roll amount: 26
+pastry roll amount: 22
+sausage roll amount: 23
+spring roll amount: 25
+***********DAILY SPENDING:***********
+BusinessCustomer spent $34.3
+CateringCustomer spent $0.0
+CasualCustomer spent $17.05
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :2
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra filling
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce
+Total cost: $3.7
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 15
+Pastry roll
+Pastry roll
+Pastry roll, extra topping
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll, extra filling, extra topping
+Total cost: $24.0
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce, extra filling
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra filling, extra topping
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra filling
+Spring Roll amount: 2
+Spring Roll, extra sauce
+Spring Roll
+Total cost: $17.3
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce, extra sauce, extra topping
+Total cost: $1.3
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Total cost: $2.5
+true
+<<<<Customer type:CateringCustomer>>>>
+Sausage roll amount: 5
+Sausage roll, extra sauce, extra sauce
+Sausage roll
+Sausage roll
+Sausage roll
+Sausage roll, extra sauce, extra topping
+Spring Roll amount: 5
+Spring Roll
+Spring Roll, extra filling
+Spring Roll, extra sauce, extra filling
+Spring Roll
+Spring Roll
+Jelly roll amount: 5
+Jelly roll, extra filling
+Jelly roll, extra filling
+Jelly roll, extra sauce
+Jelly roll
+Jelly roll, extra filling
+Total cost: $30.049999999999997
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra filling
+Total cost: $1.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll
+Spring Roll amount: 1
+Spring Roll
+Total cost: $3.5
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra filling, extra topping
+Pastry roll, extra sauce, extra sauce
+Sausage roll amount: 2
+Sausage roll, extra sauce
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll, extra sauce, extra topping
+Total cost: $17.7
+*********STORE INVENTORY:*************
+egg roll amount: 19
+jelly roll amount: 14
+pastry roll amount: 3
+sausage roll amount: 13
+spring roll amount: 14
+***********DAILY SPENDING:***********
+BusinessCustomer spent $35.0
+CateringCustomer spent $54.05
+CasualCustomer spent $12.2
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :3
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Total cost: $2.5
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra sauce, extra sauce
+Jelly roll amount: 2
+Jelly roll
+Jelly roll, extra filling
+Pastry roll amount: 2
+Pastry roll, extra filling
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra sauce
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra sauce, extra sauce, extra topping
+Total cost: $17.85
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Pastry roll amount: 1
+Pastry roll
+Total cost: $6.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra filling
+Spring Roll amount: 1
+Spring Roll, extra topping
+Total cost: $4.25
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra sauce, extra filling
+Jelly roll amount: 1
+Jelly roll, extra filling, extra topping
+Total cost: $6.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce
+Total cost: $0.75
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Total cost: $2.5
+*********STORE INVENTORY:*************
+egg roll amount: 16
+jelly roll amount: 10
+pastry roll amount: -1
+sausage roll amount: 9
+spring roll amount: 7
+***********DAILY SPENDING:***********
+BusinessCustomer spent $17.85
+CateringCustomer spent $0.0
+CasualCustomer spent $22.95
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 2 outages
+------------------------------------------------------------
+day :4
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Total cost: $5.2
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll, extra sauce, extra sauce
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll, extra sauce
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra topping
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra sauce, extra topping
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra sauce, extra filling
+Spring Roll, extra sauce, extra filling, extra topping
+Total cost: $18.45
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce, extra filling
+Jelly roll, extra filling
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce, extra topping
+Pastry roll
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll
+Total cost: $17.849999999999998
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling
+Egg roll amount: 1
+Egg roll, extra filling
+Total cost: $2.9000000000000004
+true
+Just ran out of sausage roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra filling
+Sausage roll, extra sauce, extra sauce, extra topping
+Total cost: $7.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra sauce, extra sauce, extra filling
+Pastry roll amount: 1
+Pastry roll, extra topping
+Total cost: $5.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll, extra filling
+Total cost: $2.4
+*********STORE INVENTORY:*************
+egg roll amount: 10
+jelly roll amount: 4
+pastry roll amount: 25
+sausage roll amount: -1
+spring roll amount: 1
+***********DAILY SPENDING:***********
+BusinessCustomer spent $36.3
+CateringCustomer spent $0.0
+CasualCustomer spent $23.45
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :5
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of spring roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling
+Egg roll amount: 1
+Egg roll, extra filling
+Spring Roll amount: 1
+Spring Roll
+Total cost: $5.4
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 2
+Pastry roll, extra topping
+Pastry roll, extra sauce
+Jelly roll amount: 1
+Jelly roll
+Total cost: $4.55
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 2
+Jelly roll
+Jelly roll, extra sauce
+Egg roll amount: 1
+Egg roll
+Total cost: $2.75
+true
+Just ran out of jelly roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $1.7
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Pastry roll amount: 1
+Pastry roll, extra topping
+Total cost: $3.8
+*********STORE INVENTORY:*************
+egg roll amount: 8
+jelly roll amount: -1
+pastry roll amount: 22
+sausage roll amount: 28
+spring roll amount: -1
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $0.0
+CasualCustomer spent $18.2
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 3 outages
+------------------------------------------------------------
+day :6
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll
+Jelly roll amount: 2
+Jelly roll
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra topping
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce, extra topping
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll
+Total cost: $16.55
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Jelly roll amount: 1
+Jelly roll
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra filling
+Total cost: $5.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Total cost: $2.0
+true
+Just ran out of egg roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 6
+Egg roll
+Egg roll, extra sauce, extra sauce
+Egg roll, extra filling
+Egg roll
+Egg roll
+Egg roll
+Jelly roll amount: 9
+Jelly roll
+Jelly roll
+Jelly roll, extra sauce
+Jelly roll, extra sauce, extra sauce
+Jelly roll
+Jelly roll, extra filling
+Jelly roll, extra filling
+Jelly roll, extra sauce, extra filling
+Jelly roll, extra sauce, extra filling
+Total cost: $14.749999999999996
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra filling
+Jelly roll amount: 1
+Jelly roll, extra sauce
+Total cost: $2.95
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: 17
+pastry roll amount: 19
+sausage roll amount: 24
+spring roll amount: 27
+***********DAILY SPENDING:***********
+BusinessCustomer spent $16.55
+CateringCustomer spent $14.749999999999996
+CasualCustomer spent $10.9
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 1 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :7
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra filling
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll, extra sauce
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra sauce
+Spring Roll
+Total cost: $17.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Total cost: $1.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce, extra filling
+Pastry roll amount: 1
+Pastry roll
+Total cost: $3.4000000000000004
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce, extra topping
+Jelly roll amount: 2
+Jelly roll, extra sauce
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra topping
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce, extra topping
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll, extra topping
+Total cost: $18.35
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 10
+Pastry roll
+Pastry roll, extra sauce, extra sauce, extra filling, extra topping
+Pastry roll, extra filling
+Pastry roll, extra topping
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Jelly roll amount: 5
+Jelly roll, extra sauce, extra filling
+Jelly roll, extra filling
+Jelly roll, extra filling
+Jelly roll, extra filling, extra topping
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $24.249999999999996
+*********STORE INVENTORY:*************
+egg roll amount: 24
+jelly roll amount: 8
+pastry roll amount: 3
+sausage roll amount: 20
+spring roll amount: 23
+***********DAILY SPENDING:***********
+BusinessCustomer spent $35.85
+CateringCustomer spent $24.249999999999996
+CasualCustomer spent $4.9
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :8
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra filling
+Sausage roll amount: 1
+Sausage roll, extra sauce
+Total cost: $3.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce, extra filling
+Pastry roll amount: 1
+Pastry roll
+Total cost: $3.2
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra sauce, extra sauce, extra filling
+Total cost: $2.2
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 15
+Egg roll
+Egg roll
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra sauce
+Egg roll, extra topping
+Egg roll, extra topping
+Egg roll
+Egg roll, extra sauce, extra sauce
+Egg roll, extra sauce
+Egg roll, extra filling
+Egg roll, extra sauce
+Egg roll
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra filling
+Total cost: $11.349999999999998
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll
+Jelly roll amount: 1
+Jelly roll
+Total cost: $1.5
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce
+Total cost: $2.5
+*********STORE INVENTORY:*************
+egg roll amount: 8
+jelly roll amount: 6
+pastry roll amount: -1
+sausage roll amount: 18
+spring roll amount: 23
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $11.349999999999998
+CasualCustomer spent $13.350000000000001
+********DAILY OUTAGES********
+BusinessCustomer 2 outages
+CateringCustomer 1 outages
+CasualCustomer 1 outages
+------------------------------------------------------------
+day :9
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of egg roll rolls!
+Just ran out of jelly roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 8
+Egg roll
+Egg roll, extra filling
+Egg roll, extra topping
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll, extra sauce, extra filling, extra topping
+Egg roll, extra sauce, extra sauce
+Egg roll
+Jelly roll amount: 6
+Jelly roll
+Jelly roll
+Jelly roll, extra filling
+Jelly roll, extra filling
+Jelly roll
+Jelly roll, extra sauce, extra sauce
+Pastry roll amount: 1
+Pastry roll, extra filling
+Total cost: $14.749999999999998
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra filling
+Total cost: $1.7
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 5
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll
+Pastry roll
+Pastry roll, extra filling, extra topping
+Pastry roll
+Sausage roll amount: 5
+Sausage roll, extra filling
+Sausage roll
+Sausage roll, extra sauce, extra filling
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 5
+Spring Roll
+Spring Roll, extra sauce
+Spring Roll
+Spring Roll, extra sauce, extra sauce
+Spring Roll
+Total cost: $33.099999999999994
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 3
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra filling
+Sausage roll, extra sauce, extra sauce
+Total cost: $7.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling
+Total cost: $2.2
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: -1
+pastry roll amount: 23
+sausage roll amount: 9
+spring roll amount: 18
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $47.849999999999994
+CasualCustomer spent $11.100000000000001
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 1 outages
+CasualCustomer 1 outages
+------------------------------------------------------------
+day :10
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra topping
+Egg roll
+Jelly roll amount: 2
+Jelly roll
+Jelly roll, extra filling
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra sauce, extra filling, extra topping
+Spring Roll, extra filling, extra topping
+Total cost: $17.4
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling
+Sausage roll amount: 1
+Sausage roll
+Total cost: $4.7
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra filling
+Jelly roll amount: 2
+Jelly roll
+Jelly roll
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra sauce, extra sauce
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra filling
+Spring Roll amount: 2
+Spring Roll
+Spring Roll
+Total cost: $17.1
+*********STORE INVENTORY:*************
+egg roll amount: 26
+jelly roll amount: 26
+pastry roll amount: 19
+sausage roll amount: 4
+spring roll amount: 13
+***********DAILY SPENDING:***********
+BusinessCustomer spent $34.5
+CateringCustomer spent $0.0
+CasualCustomer spent $4.7
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :11
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra filling
+Jelly roll amount: 2
+Jelly roll
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra filling
+Pastry roll
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra filling
+Spring Roll
+Total cost: $16.55
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Total cost: $2.0
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+*********STORE INVENTORY:*************
+egg roll amount: 24
+jelly roll amount: 24
+pastry roll amount: 17
+sausage roll amount: 1
+spring roll amount: 11
+***********DAILY SPENDING:***********
+BusinessCustomer spent $16.55
+CateringCustomer spent $0.0
+CasualCustomer spent $2.0
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :12
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of sausage roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 2
+Spring Roll, extra topping
+Spring Roll, extra topping
+Sausage roll amount: 1
+Sausage roll
+Total cost: $7.6
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CateringCustomer>>>>
+Spring Roll amount: 5
+Spring Roll
+Spring Roll, extra topping
+Spring Roll, extra sauce
+Spring Roll
+Spring Roll, extra sauce
+Egg roll amount: 5
+Egg roll, extra sauce, extra sauce
+Egg roll
+Egg roll
+Egg roll
+Egg roll
+Pastry roll amount: 5
+Pastry roll, extra sauce, extra sauce
+Pastry roll
+Pastry roll
+Pastry roll, extra filling, extra topping
+Pastry roll
+Total cost: $24.8
+*********STORE INVENTORY:*************
+egg roll amount: 19
+jelly roll amount: 24
+pastry roll amount: 12
+sausage roll amount: -1
+spring roll amount: 4
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $24.8
+CasualCustomer spent $7.6
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :13
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Spring Roll amount: 1
+Spring Roll, extra sauce
+Total cost: $4.75
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $1.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce
+Egg roll amount: 1
+Egg roll
+Pastry roll amount: 1
+Pastry roll
+Total cost: $4.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra sauce, extra filling, extra topping
+Jelly roll amount: 1
+Jelly roll, extra filling
+Spring Roll amount: 1
+Spring Roll, extra filling
+Total cost: $6.15
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling
+Pastry roll amount: 1
+Pastry roll, extra filling
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce
+Total cost: $4.9
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll, extra filling
+Egg roll amount: 1
+Egg roll, extra sauce, extra sauce
+Total cost: $3.4000000000000004
+true
+Just ran out of spring roll rolls!
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll, extra sauce, extra sauce
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra topping
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra filling
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra filling, extra topping
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra filling
+Spring Roll
+Total cost: $17.9
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling
+Egg roll amount: 1
+Egg roll, extra filling
+Total cost: $2.9000000000000004
+*********STORE INVENTORY:*************
+egg roll amount: 13
+jelly roll amount: 18
+pastry roll amount: 7
+sausage roll amount: 24
+spring roll amount: -1
+***********DAILY SPENDING:***********
+BusinessCustomer spent $17.9
+CateringCustomer spent $0.0
+CasualCustomer spent $28.299999999999997
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :14
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll, extra topping
+Jelly roll amount: 2
+Jelly roll
+Jelly roll, extra filling
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce
+Pastry roll
+Sausage roll amount: 2
+Sausage roll
+Sausage roll
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra sauce, extra sauce
+Total cost: $16.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra filling
+Total cost: $6.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling, extra topping
+Egg roll amount: 1
+Egg roll, extra filling, extra topping
+Spring Roll amount: 1
+Spring Roll
+Total cost: $6.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra topping
+Spring Roll amount: 1
+Spring Roll
+Total cost: $4.05
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra filling
+Jelly roll amount: 2
+Jelly roll, extra sauce
+Jelly roll, extra sauce
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra sauce
+Spring Roll, extra filling
+Total cost: $18.1
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling
+Jelly roll amount: 1
+Jelly roll, extra filling, extra topping
+Total cost: $2.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra filling, extra topping
+Total cost: $2.75
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Total cost: $1.5
+*********STORE INVENTORY:*************
+egg roll amount: 7
+jelly roll amount: 12
+pastry roll amount: 1
+sausage roll amount: 18
+spring roll amount: 22
+***********DAILY SPENDING:***********
+BusinessCustomer spent $34.6
+CateringCustomer spent $0.0
+CasualCustomer spent $23.2
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :15
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 5
+Egg roll, extra topping
+Egg roll
+Egg roll, extra sauce
+Egg roll
+Egg roll, extra sauce, extra sauce
+Spring Roll amount: 5
+Spring Roll, extra sauce, extra topping
+Spring Roll
+Spring Roll, extra filling, extra topping
+Spring Roll
+Spring Roll, extra filling
+Sausage roll amount: 5
+Sausage roll
+Sausage roll
+Sausage roll, extra topping
+Sausage roll
+Sausage roll, extra sauce, extra sauce
+Total cost: $28.1
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra sauce
+Total cost: $1.25
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra filling, extra topping
+Total cost: $2.5
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Jelly roll amount: 1
+Jelly roll, extra filling, extra topping
+Total cost: $3.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Total cost: $2.0
+*********STORE INVENTORY:*************
+egg roll amount: 2
+jelly roll amount: 10
+pastry roll amount: -1
+sausage roll amount: 11
+spring roll amount: 17
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $28.1
+CasualCustomer spent $8.75
+********DAILY OUTAGES********
+BusinessCustomer 2 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :16
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 10
+Pastry roll, extra sauce
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra topping
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra sauce, extra filling
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra topping
+Pastry roll
+Pastry roll
+Jelly roll amount: 5
+Jelly roll
+Jelly roll, extra sauce, extra sauce, extra filling
+Jelly roll, extra topping
+Jelly roll
+Jelly roll
+Total cost: $24.4
+true
+Just ran out of egg roll rolls!
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll, extra filling, extra topping
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce, extra filling
+Jelly roll
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra sauce
+Sausage roll amount: 2
+Sausage roll, extra topping
+Sausage roll, extra filling
+Spring Roll amount: 2
+Spring Roll, extra topping
+Spring Roll, extra sauce, extra sauce
+Total cost: $17.75
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Just ran out of jelly roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 3
+Jelly roll
+Jelly roll
+Jelly roll
+Pastry roll amount: 12
+Pastry roll, extra filling
+Pastry roll
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra filling
+Pastry roll
+Pastry roll
+Pastry roll, extra filling
+Pastry roll
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra filling, extra topping
+Pastry roll, extra sauce, extra sauce
+Pastry roll
+Total cost: $23.549999999999997
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: -1
+pastry roll amount: 6
+sausage roll amount: 9
+spring roll amount: 15
+***********DAILY SPENDING:***********
+BusinessCustomer spent $17.75
+CateringCustomer spent $47.949999999999996
+CasualCustomer spent $0.0
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 1 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :17
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Spring Roll amount: 2
+Spring Roll, extra filling, extra topping
+Spring Roll, extra sauce, extra filling, extra topping
+Total cost: $8.25
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra topping
+Jelly roll amount: 1
+Jelly roll, extra filling
+Total cost: $4.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Jelly roll amount: 1
+Jelly roll
+Total cost: $2.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 2
+Pastry roll, extra filling
+Pastry roll
+Jelly roll amount: 1
+Jelly roll
+Total cost: $4.2
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll
+Total cost: $1.0
+*********STORE INVENTORY:*************
+egg roll amount: 30
+jelly roll amount: 26
+pastry roll amount: 1
+sausage roll amount: 8
+spring roll amount: 13
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $0.0
+CasualCustomer spent $20.45
+********DAILY OUTAGES********
+BusinessCustomer 2 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :18
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 15
+Egg roll, extra sauce, extra sauce
+Egg roll, extra sauce, extra sauce
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra filling, extra topping
+Egg roll
+Egg roll
+Egg roll, extra sauce, extra sauce, extra topping
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll
+Egg roll, extra sauce, extra topping
+Egg roll, extra sauce, extra sauce
+Egg roll
+Egg roll, extra sauce, extra sauce
+Egg roll
+Total cost: $12.450000000000001
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra sauce, extra sauce
+Total cost: $2.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce, extra filling
+Total cost: $2.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 2
+Spring Roll
+Spring Roll
+Egg roll amount: 1
+Egg roll
+Total cost: $5.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce, extra topping
+Total cost: $2.8
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll
+Total cost: $2.5
+*********STORE INVENTORY:*************
+egg roll amount: 14
+jelly roll amount: 26
+pastry roll amount: -1
+sausage roll amount: 6
+spring roll amount: 10
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $12.450000000000001
+CasualCustomer spent $15.5
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 1 outages
+CasualCustomer 1 outages
+------------------------------------------------------------
+day :19
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra topping
+Spring Roll amount: 1
+Spring Roll
+Total cost: $3.8
+true
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 5
+Jelly roll, extra sauce, extra filling
+Jelly roll
+Jelly roll, extra sauce, extra sauce, extra topping
+Jelly roll, extra sauce, extra sauce
+Jelly roll, extra sauce, extra sauce, extra filling, extra topping
+Sausage roll amount: 5
+Sausage roll, extra filling
+Sausage roll
+Sausage roll, extra sauce, extra topping
+Sausage roll, extra sauce, extra filling
+Sausage roll, extra sauce
+Spring Roll amount: 5
+Spring Roll, extra sauce, extra sauce, extra filling
+Spring Roll, extra sauce, extra filling, extra topping
+Spring Roll
+Spring Roll, extra filling
+Spring Roll, extra sauce
+Total cost: $33.599999999999994
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra topping
+Total cost: $2.8
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 10
+Pastry roll, extra sauce
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra filling
+Pastry roll, extra filling
+Pastry roll, extra topping
+Pastry roll, extra topping
+Pastry roll
+Pastry roll
+Pastry roll, extra filling
+Pastry roll
+Jelly roll amount: 5
+Jelly roll, extra sauce
+Jelly roll
+Jelly roll, extra filling
+Jelly roll
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $23.099999999999998
+*********STORE INVENTORY:*************
+egg roll amount: 14
+jelly roll amount: 15
+pastry roll amount: 20
+sausage roll amount: 1
+spring roll amount: 3
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $56.69999999999999
+CasualCustomer spent $6.6
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :20
+^^^^^Test for correct customer instantiation^^^^^
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Just ran out of sausage roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce, extra topping
+Egg roll amount: 1
+Egg roll
+Total cost: $6.0
+*********STORE INVENTORY:*************
+egg roll amount: 13
+jelly roll amount: 15
+pastry roll amount: 20
+sausage roll amount: -1
+spring roll amount: 2
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $0.0
+CasualCustomer spent $6.0
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 1 outages
+------------------------------------------------------------
+day :21
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra filling
+Total cost: $1.2
+true
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 5
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll, extra topping
+Sausage roll amount: 5
+Sausage roll
+Sausage roll, extra filling, extra topping
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra filling
+Sausage roll
+Pastry roll amount: 5
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra filling
+Pastry roll
+Pastry roll, extra topping
+Pastry roll
+Total cost: $24.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra sauce, extra sauce, extra filling
+Sausage roll amount: 1
+Sausage roll, extra filling
+Total cost: $4.4
+true
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 5
+Pastry roll
+Pastry roll, extra sauce, extra topping
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra sauce, extra filling, extra topping
+Pastry roll
+Jelly roll amount: 5
+Jelly roll, extra sauce, extra sauce
+Jelly roll, extra sauce, extra sauce, extra filling
+Jelly roll, extra filling, extra topping
+Jelly roll, extra sauce
+Jelly roll, extra sauce, extra sauce, extra filling, extra topping
+Sausage roll amount: 5
+Sausage roll
+Sausage roll, extra sauce, extra filling
+Sausage roll, extra sauce, extra sauce
+Sausage roll
+Sausage roll
+Total cost: $28.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Egg roll amount: 1
+Egg roll
+Total cost: $2.0
+*********STORE INVENTORY:*************
+egg roll amount: 12
+jelly roll amount: 4
+pastry roll amount: 8
+sausage roll amount: 19
+spring roll amount: 2
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $53.15
+CasualCustomer spent $7.6000000000000005
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :22
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce, extra sauce, extra topping
+Total cost: $1.3
+true
+Just ran out of egg roll rolls!
+Just ran out of jelly roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 11
+Egg roll
+Egg roll, extra topping
+Egg roll, extra filling
+Egg roll
+Egg roll
+Egg roll, extra sauce, extra filling
+Egg roll
+Egg roll, extra sauce, extra sauce
+Egg roll
+Egg roll, extra sauce, extra sauce
+Egg roll, extra filling
+Jelly roll amount: 4
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll
+Total cost: $11.65
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra filling
+Total cost: $2.45
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra sauce, extra filling
+Total cost: $5.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra filling
+Total cost: $1.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra filling, extra topping
+Pastry roll amount: 1
+Pastry roll, extra sauce
+Total cost: $6.75
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: -1
+pastry roll amount: 4
+sausage roll amount: 15
+spring roll amount: 2
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $11.65
+CasualCustomer spent $18.15
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 1 outages
+CasualCustomer 4 outages
+------------------------------------------------------------
+day :23
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of spring roll rolls!
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra sauce, extra filling, extra topping
+Egg roll
+Jelly roll amount: 2
+Jelly roll
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra sauce, extra sauce
+Spring Roll amount: 2
+Spring Roll
+Spring Roll
+Total cost: $16.9
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce
+Jelly roll, extra topping
+Pastry roll amount: 1
+Pastry roll, extra sauce, extra sauce
+Total cost: $4.8
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce, extra topping
+Jelly roll, extra filling
+Total cost: $3.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll
+Sausage roll amount: 1
+Sausage roll
+Total cost: $3.0
+*********STORE INVENTORY:*************
+egg roll amount: 28
+jelly roll amount: 23
+pastry roll amount: 1
+sausage roll amount: 12
+spring roll amount: -1
+***********DAILY SPENDING:***********
+BusinessCustomer spent $16.9
+CateringCustomer spent $0.0
+CasualCustomer spent $10.8
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 2 outages
+------------------------------------------------------------
+day :24
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling
+Pastry roll amount: 1
+Pastry roll, extra filling
+Total cost: $2.4
+true
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 10
+Jelly roll, extra sauce, extra sauce
+Jelly roll, extra filling
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll, extra filling
+Jelly roll
+Jelly roll, extra filling
+Jelly roll, extra filling, extra topping
+Jelly roll, extra filling
+Spring Roll amount: 5
+Spring Roll, extra sauce, extra filling
+Spring Roll, extra sauce, extra topping
+Spring Roll, extra sauce, extra sauce
+Spring Roll, extra filling
+Spring Roll
+Total cost: $25.999999999999996
+true
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 5
+Jelly roll, extra sauce, extra sauce
+Jelly roll, extra filling
+Jelly roll
+Jelly roll, extra sauce
+Jelly roll
+Sausage roll amount: 10
+Sausage roll, extra sauce, extra filling
+Sausage roll
+Sausage roll
+Sausage roll, extra filling
+Sausage roll
+Sausage roll, extra filling
+Sausage roll
+Sausage roll, extra filling
+Sausage roll, extra filling, extra topping
+Sausage roll
+Total cost: $27.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll, extra topping
+Egg roll amount: 1
+Egg roll, extra sauce
+Spring Roll amount: 1
+Spring Roll
+Total cost: $4.55
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Just ran out of sausage roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra filling
+Sausage roll, extra filling, extra topping
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $6.65
+true
+<<<<Customer type:CasualCustomer>>>>
+Jelly roll amount: 1
+Jelly roll
+Total cost: $1.0
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+*********STORE INVENTORY:*************
+egg roll amount: 26
+jelly roll amount: 5
+pastry roll amount: -1
+sausage roll amount: -1
+spring roll amount: 24
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $53.5
+CasualCustomer spent $14.6
+********DAILY OUTAGES********
+BusinessCustomer 2 outages
+CateringCustomer 0 outages
+CasualCustomer 2 outages
+------------------------------------------------------------
+day :25
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll, extra sauce, extra sauce, extra filling
+Jelly roll amount: 2
+Jelly roll, extra filling, extra topping
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra filling
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce, extra filling, extra topping
+Sausage roll, extra filling
+Spring Roll amount: 2
+Spring Roll, extra topping
+Spring Roll
+Total cost: $18.35
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll
+Egg roll
+Jelly roll amount: 2
+Jelly roll
+Jelly roll
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra sauce, extra filling
+Pastry roll
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra sauce
+Spring Roll amount: 2
+Spring Roll, extra sauce
+Spring Roll
+Total cost: $16.4
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling, extra topping
+Egg roll amount: 1
+Egg roll, extra filling
+Total cost: $3.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll
+Total cost: $4.9
+*********STORE INVENTORY:*************
+egg roll amount: 20
+jelly roll amount: 1
+pastry roll amount: 26
+sausage roll amount: 24
+spring roll amount: 19
+***********DAILY SPENDING:***********
+BusinessCustomer spent $34.75
+CateringCustomer spent $0.0
+CasualCustomer spent $8.600000000000001
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :26
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of jelly roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra sauce, extra sauce
+Pastry roll amount: 1
+Pastry roll
+Jelly roll amount: 1
+Jelly roll
+Total cost: $5.5
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 15
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll
+Egg roll, extra filling, extra topping
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Egg roll
+Egg roll, extra topping
+Egg roll
+Egg roll, extra sauce
+Egg roll
+Egg roll
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll, extra filling
+Total cost: $11.549999999999999
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce, extra filling
+Sausage roll amount: 1
+Sausage roll
+Total cost: $2.95
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 2
+Pastry roll, extra sauce, extra filling
+Pastry roll, extra sauce, extra sauce
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce, extra filling
+Total cost: $6.65
+true
+Just ran out of egg roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 4
+Egg roll
+Egg roll
+Egg roll, extra filling
+Egg roll, extra filling
+Pastry roll amount: 11
+Pastry roll, extra filling
+Pastry roll
+Pastry roll, extra filling
+Pastry roll, extra filling
+Pastry roll, extra filling, extra topping
+Pastry roll, extra filling
+Pastry roll, extra filling, extra topping
+Pastry roll
+Pastry roll, extra filling
+Pastry roll, extra topping
+Pastry roll
+Total cost: $21.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll, extra filling, extra topping
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra filling
+Total cost: $4.45
+true
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Spring Roll amount: 1
+Spring Roll, extra topping
+Total cost: $4.3
+true
+Just ran out of pastry roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 10
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll, extra filling
+Pastry roll
+Pastry roll, extra sauce
+Pastry roll, extra filling, extra topping
+Pastry roll, extra filling
+Pastry roll, extra filling, extra topping
+Sausage roll amount: 5
+Sausage roll, extra sauce, extra topping
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra sauce, extra filling
+Sausage roll
+Sausage roll
+Total cost: $28.15
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling
+Total cost: $2.7
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: -1
+pastry roll amount: -1
+sausage roll amount: 16
+spring roll amount: 16
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $60.9
+CasualCustomer spent $26.55
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 3 outages
+CasualCustomer 3 outages
+------------------------------------------------------------
+day :27
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra sauce
+Jelly roll amount: 1
+Jelly roll
+Total cost: $2.45
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll
+Jelly roll amount: 2
+Jelly roll, extra sauce, extra sauce
+Jelly roll
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra sauce, extra sauce
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra topping
+Spring Roll amount: 2
+Spring Roll, extra sauce, extra sauce
+Spring Roll
+Total cost: $17.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 2
+Sausage roll
+Sausage roll, extra filling
+Spring Roll amount: 1
+Spring Roll
+Total cost: $6.7
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra filling
+Pastry roll amount: 1
+Pastry roll, extra filling
+Sausage roll amount: 1
+Sausage roll
+Total cost: $6.4
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra sauce, extra sauce
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce
+Pastry roll amount: 1
+Pastry roll, extra filling
+Total cost: $6.2
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce
+Total cost: $0.75
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra filling
+Egg roll, extra filling
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll, extra sauce, extra sauce, extra filling
+Pastry roll amount: 2
+Pastry roll, extra filling
+Pastry roll, extra topping
+Sausage roll amount: 2
+Sausage roll, extra filling
+Sausage roll, extra topping
+Spring Roll amount: 2
+Spring Roll
+Spring Roll, extra sauce
+Total cost: $17.55
+*********STORE INVENTORY:*************
+egg roll amount: 23
+jelly roll amount: 24
+pastry roll amount: 24
+sausage roll amount: 9
+spring roll amount: 9
+***********DAILY SPENDING:***********
+BusinessCustomer spent $34.55
+CateringCustomer spent $0.0
+CasualCustomer spent $22.5
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 0 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :28
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 15
+Egg roll, extra sauce, extra filling
+Egg roll
+Egg roll, extra sauce
+Egg roll
+Egg roll
+Egg roll, extra sauce
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Egg roll
+Egg roll, extra topping
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll
+Egg roll, extra filling
+Total cost: $10.249999999999998
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra topping
+Total cost: $0.8
+true
+<<<<Customer type:BusinessCustomer>>>>
+Egg roll amount: 2
+Egg roll, extra topping
+Egg roll
+Jelly roll amount: 2
+Jelly roll, extra filling
+Jelly roll
+Pastry roll amount: 2
+Pastry roll
+Pastry roll, extra filling
+Sausage roll amount: 2
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra sauce, extra sauce, extra filling
+Spring Roll amount: 2
+Spring Roll
+Spring Roll
+Total cost: $16.9
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce
+Pastry roll amount: 1
+Pastry roll, extra sauce
+Sausage roll amount: 1
+Sausage roll
+Total cost: $4.5
+*********STORE INVENTORY:*************
+egg roll amount: 4
+jelly roll amount: 22
+pastry roll amount: 21
+sausage roll amount: 6
+spring roll amount: 7
+***********DAILY SPENDING:***********
+BusinessCustomer spent $16.9
+CateringCustomer spent $10.249999999999998
+CasualCustomer spent $5.3
+********DAILY OUTAGES********
+BusinessCustomer 0 outages
+CateringCustomer 1 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :29
+^^^^^Test for correct customer instantiation^^^^^
+true
+Just ran out of egg roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 4
+Egg roll
+Egg roll, extra topping
+Egg roll, extra sauce
+Egg roll
+Jelly roll amount: 11
+Jelly roll
+Jelly roll, extra filling
+Jelly roll, extra filling
+Jelly roll
+Jelly roll
+Jelly roll, extra filling
+Jelly roll, extra sauce
+Jelly roll, extra sauce, extra filling, extra topping
+Jelly roll, extra filling
+Jelly roll
+Jelly roll, extra sauce, extra sauce, extra filling, extra topping
+Total cost: $16.35
+true
+<<<<Customer type:CasualCustomer>>>>
+Spring Roll amount: 1
+Spring Roll, extra sauce
+Total cost: $2.75
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+<<<<Customer type:CasualCustomer>>>>
+Sausage roll amount: 1
+Sausage roll, extra sauce, extra sauce
+Total cost: $2.5
+true
+Just ran out of sausage roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Pastry roll amount: 10
+Pastry roll, extra sauce
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra sauce
+Pastry roll, extra filling
+Pastry roll, extra sauce
+Pastry roll
+Pastry roll
+Pastry roll
+Pastry roll, extra filling
+Pastry roll, extra sauce, extra sauce, extra topping
+Sausage roll amount: 5
+Sausage roll, extra sauce, extra sauce
+Sausage roll, extra filling
+Sausage roll
+Sausage roll, extra sauce
+Sausage roll
+Total cost: $28.35
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Just ran out of jelly roll rolls!
+<<<<Customer type:CateringCustomer>>>>
+Jelly roll amount: 11
+Jelly roll
+Jelly roll, extra filling
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll
+Jelly roll, extra sauce, extra topping
+Jelly roll, extra sauce, extra sauce, extra filling, extra topping
+Jelly roll, extra sauce
+Pastry roll amount: 4
+Pastry roll, extra filling, extra topping
+Pastry roll, extra sauce, extra filling
+Pastry roll
+Pastry roll, extra sauce, extra sauce
+Total cost: $20.45
+*********STORE INVENTORY:*************
+egg roll amount: -1
+jelly roll amount: -1
+pastry roll amount: 7
+sausage roll amount: -1
+spring roll amount: 6
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $65.15
+CasualCustomer spent $5.25
+********DAILY OUTAGES********
+BusinessCustomer 2 outages
+CateringCustomer 2 outages
+CasualCustomer 0 outages
+------------------------------------------------------------
+day :30
+^^^^^Test for correct customer instantiation^^^^^
+true
+<<<<Customer type:CateringCustomer>>>>
+Egg roll amount: 10
+Egg roll
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll, extra filling
+Egg roll, extra sauce, extra sauce
+Egg roll, extra sauce, extra sauce, extra filling
+Egg roll
+Egg roll, extra sauce, extra sauce, extra topping
+Egg roll, extra filling
+Egg roll, extra topping
+Spring Roll amount: 5
+Spring Roll
+Spring Roll, extra sauce, extra sauce, extra filling
+Spring Roll, extra filling
+Spring Roll
+Spring Roll, extra filling
+Total cost: $21.7
+true
+Business customer ordered nothing!!!
+<<<<Customer type:BusinessCustomer>>>>
+Total cost: $0.0
+true
+Just ran out of spring roll rolls!
+<<<<Customer type:CasualCustomer>>>>
+Pastry roll amount: 1
+Pastry roll
+Jelly roll amount: 1
+Jelly roll, extra sauce
+Spring Roll amount: 1
+Spring Roll, extra sauce
+Total cost: $5.5
+true
+<<<<Customer type:CasualCustomer>>>>
+Egg roll amount: 1
+Egg roll, extra sauce, extra sauce, extra filling
+Pastry roll amount: 1
+Pastry roll
+Jelly roll amount: 1
+Jelly roll, extra sauce, extra sauce, extra filling
+Total cost: $4.4
+*********STORE INVENTORY:*************
+egg roll amount: 19
+jelly roll amount: 28
+pastry roll amount: 5
+sausage roll amount: 30
+spring roll amount: -1
+***********DAILY SPENDING:***********
+BusinessCustomer spent $0.0
+CateringCustomer spent $21.7
+CasualCustomer spent $9.9
+********DAILY OUTAGES********
+BusinessCustomer 1 outages
+CateringCustomer 0 outages
+CasualCustomer 1 outages
+***********SPENDING AT END OF 30 DAYS***********
+BusinessCustomer spent $400.25
+CateringCustomer spent $598.5500000000001
+CasualCustomer spent $386.4499999999998
+******ROLLS SOLD AT END OF 30 DAYS******
+egg roll sold: 191
+jelly roll sold: 182
+pastry roll sold: 205
+sausage roll sold: 150
+spring roll sold: 120
+Total rolls sold: 848
+********TOTAL OUTAGES********
+total outages: 53
+Just ran out of egg roll rolls!
+Just ran out of jelly roll rolls!
+Just ran out of pastry roll rolls!
+Just ran out of sausage roll rolls!
+Just ran out of spring roll rolls!
+The store is out of rolls! we will close.
+false
+^^^^^Store closing test passed^^^^^
+Business customer ordered nothing!!!
+^^^^^Business customer leaving test passed^^^^^
+^^^^^Business customer ordering test passed^^^^^

@@ -27,7 +27,7 @@ public abstract class RollStore
     protected List<String> customerTypes = new ArrayList<>();
     protected RollFactory rollFactory = new RollFactory();
     protected boolean open;
-    protected PropertyChangeSupport support = new PropertyChangeSupport(this);
+    public PropertyChangeSupport support = new PropertyChangeSupport(this);
 
     public RollStore()
     {
