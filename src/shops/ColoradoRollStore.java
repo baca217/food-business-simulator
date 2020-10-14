@@ -78,10 +78,11 @@ public class ColoradoRollStore extends RollStore
             if(r.equals(rollName))
             {
                 roll = getRoll(rollName);
+                found  = true;
                 break;
             }
         }
-        if(roll == null)
+        if(found == false)
         {
             System.out.println(rollName+" isn't a known roll!");
         }

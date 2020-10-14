@@ -18,4 +18,9 @@ public class Sauce extends RollDecorator
     {
         return roll.cost() + .25;
     }
+
+    public String getRollType()
+    {
+        return (roll.getRollType());
+    }
 }

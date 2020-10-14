@@ -17,7 +17,7 @@ import java.util.Random;
 abstract public class Customer implements PropertyChangeListener
 {
     protected boolean isStoreOpen = false;
-    List<Roll> myRolls;
+    List<Roll> myRolls = new ArrayList<>();
 
     public int getNumberOfAvailable(RollStore myStore) {
         int count = 0;
@@ -35,17 +35,13 @@ abstract public class Customer implements PropertyChangeListener
     {
         if(isStoreOpen)
         {
-            return rollOrders(myStore);
+            List<String> temp =  rollOrders(myStore); //get order
+            return temp; //return so store can update
         }
         else
         {
-            return null;
+            return new ArrayList<>();
         }
-    }
-
-    public void receiveOrder(List<Roll> rollOrder)
-    {
-        myRolls = rollOrder;
     }
 
     public String addToppings(){
@@ -82,6 +78,11 @@ abstract public class Customer implements PropertyChangeListener
             default:
                 System.out.println(evt.getPropertyName()+" is an unsupported event");
         }
+    }
+
+    public List<Roll> rollTypesBought()
+    {
+        return myRolls;
     }
 
 }

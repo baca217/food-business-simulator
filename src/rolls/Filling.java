@@ -18,4 +18,9 @@ public class Filling extends RollDecorator
     {
         return roll.cost() + .20;
     }
+
+    public String getRollType()
+    {
+        return (roll.getRollType());
+    }
 }

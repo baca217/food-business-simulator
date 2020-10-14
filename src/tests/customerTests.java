@@ -1,6 +1,7 @@
 package tests;
 import customers.*;
 import org.junit.jupiter.api.Test;
+import rolls.Roll;
 import shops.*;
 
 import java.util.List;
@@ -14,7 +15,19 @@ public class customerTests
     CateringCustomer cateringCustomer = new CateringCustomer();
     int i,j;
 
+    @Test
+    public void testRollsList()
+    {
+        testStore.addPropertyChangeListener(businessCustomer);
+        testStore.startDay();
 
+        businessCustomer.arriveAndOrder(testStore);
+        for(Roll roll: businessCustomer.rollTypesBought())
+        {
+            System.out.println(roll.getDescription()+"-------------");
+            System.out.println(roll.getRollType());
+        }
+    }
 
     @Test
     public void customerOrderTest()

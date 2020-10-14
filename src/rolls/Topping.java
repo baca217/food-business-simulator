@@ -18,4 +18,9 @@ public class Topping extends RollDecorator
     {
         return roll.cost() + .30;
     }
+
+    public String getRollType()
+    {
+        return (roll.getRollType());
+    }
 }
