@@ -90,27 +90,17 @@ public class storeTests
         {
             System.out.println(thisRoll.getDescription());
         }
-
     }
 
     @Test
-    public void customerOrders()
+    public void customerInput()
     {
-        BusinessCustomer bTest = new BusinessCustomer();
-        test.addPropertyChangeListener(bTest);
+        System.out.println("business input");
+        BusinessCustomer businessCustomer = new BusinessCustomer();
+        test.addPropertyChangeListener(businessCustomer);
+
         test.startDay();
-        List<String> order = bTest.arriveAndOrder(test);
-        List<Roll> rolls = test.rollOrders(order);
-        System.out.println("order from customer-------------------------");
-        for(String item: order)
-        {
-            System.out.println(item);
-        }
-        System.out.println("received from store-------------------------");
-        for(Roll roll: rolls)
-        {
-            System.out.println(roll.getDescription());
-        }
+        businessCustomer.receive(test.serviceCustomer(businessCustomer));
         test.printInventory();
     }
 }

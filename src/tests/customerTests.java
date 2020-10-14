@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import rolls.Roll;
 import shops.*;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -16,102 +18,83 @@ public class customerTests
     int i,j;
 
     @Test
-    public void testRollsList()
+    public void customerOrder()
     {
-        testStore.addPropertyChangeListener(businessCustomer);
-        testStore.startDay();
-
-        businessCustomer.arriveAndOrder(testStore);
-        for(Roll roll: businessCustomer.rollTypesBought())
+        List<Customer> testCust = Arrays.asList(businessCustomer, casualCustomer, cateringCustomer);
+        for(Customer customer: testCust)
         {
-            System.out.println(roll.getDescription()+"-------------");
-            System.out.println(roll.getRollType());
+            System.out.println("Customer type: "+customer.getClass().getSimpleName());
+            for(String order: customer.firstOrder(testStore.menu()))
+            {
+                System.out.println(order);
+            }
+            System.out.println("--------------------------------------------------------------------------------");
         }
     }
 
-    @Test
-    public void customerOrderTest()
+    public void orderFail()
     {
-        testStore.addPropertyChangeListener(businessCustomer);
-        testStore.addPropertyChangeListener(casualCustomer);
-        testStore.addPropertyChangeListener(cateringCustomer);
-
         testStore.startDay();
+        List<Customer> testCust = Arrays.asList(businessCustomer, casualCustomer, cateringCustomer);
+        int i, j;
+        List<String> menu = testStore.menu();
+        String type;
 
-        System.out.println("business customer:--------------------");
-        for(String order: businessCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
-
-        System.out.println("catering customer:--------------------");
-        for(String order: cateringCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
-
-        System.out.println("casual customer:--------------------");
-        for(String order: casualCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
-    }
-
-    @Test
-    public void failOrderTest()
-    {
-        testStore.addPropertyChangeListener(businessCustomer);
-        testStore.addPropertyChangeListener(casualCustomer);
-        testStore.addPropertyChangeListener(cateringCustomer);
-
-        //business customer test
-        testStore.startDay();
+        //business test
         for(i = 0; i < 30; i++)
         {
             testStore.getRoll("egg roll");
         }
-        System.out.println("business customer:--------------------");
-        for(String order: businessCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
+        List<String> order = businessCustomer.firstOrder(testStore.menu());
+        List<String> canDo = testStore.canDoOrder(order);
+        List<String> order2 = businessCustomer.secondOrder(canDo, testStore.menu(), testStore.giveInventory());
+        System.out.println("business---------------------------------");
+        System.out.println(order);
+        System.out.println(canDo);
+        System.out.println(order2);
         //casual customer test
         testStore.startDay();
-        List<String> tempMenu = testStore.menu();
-        for(i = 0; i < tempMenu.size() - 1; i++)
+        for(i = 1; i < 5; i++)
         {
-            for(j = 0; j  < 30; j++)
+            type = menu.get(i);
+            for(j = 0; j < 30; j++)
             {
-                testStore.getRoll(tempMenu.get(i));
+                testStore.getRoll(type);
             }
         }
 
-        j = tempMenu.size()-1;
+        type = menu.get(0);
         for(i = 0; i < 29; i++)
         {
-            testStore.getRoll(tempMenu.get(j));
+            testStore.getRoll(type);
         }
-
-        System.out.println("casual customer:--------------------");
-        for(String order: casualCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
-
-        //cater customer test
+        order = casualCustomer.firstOrder(testStore.menu());
+        canDo = testStore.canDoOrder(order);
+        HashMap<String, Integer> temp = testStore.giveInventory();
+        order2 = casualCustomer.secondOrder(canDo, testStore.menu(), temp);
+        System.out.println("Casual---------------------------");
+        System.out.println(order);
+        System.out.println(canDo);
+        System.out.println(order2);
+        //catering customer test
+        testStore.getRoll("egg roll");
+        testStore.printInventory();
         testStore.startDay();
-        for(i = 0; i < tempMenu.size(); i++)
+        for(String r: menu)
         {
-            for(j = 0; j  < 26; j++)
-            {
-                testStore.getRoll(tempMenu.get(i));
-            }
+            for(i = 0; i < 28; i++)
+            {testStore.getRoll(r);}
         }
 
-        System.out.println("cater customer:--------------------");
-        for(String order: cateringCustomer.arriveAndOrder(testStore))
-        {
-            System.out.println(order);
-        }
+        order = cateringCustomer.firstOrder(menu);
+        testStore.printInventory();
+        System.out.println("WTF");
+        canDo = testStore.canDoOrder(order);
+        testStore.printInventory();
+        order2 = cateringCustomer.secondOrder(canDo, menu, testStore.giveInventory());
+        System.out.println("catering---------------------------");
+        System.out.println(order);
+        System.out.println(canDo.size());
+        System.out.println(order2.size());
     }
 }

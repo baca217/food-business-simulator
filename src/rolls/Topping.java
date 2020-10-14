@@ -11,7 +11,7 @@ public class Topping extends RollDecorator
 
     public String getDescription()
     {
-        return roll.getDescription() + ", extra toppings";
+        return roll.getDescription() + ", extra topping";
     }
 
     public double cost()
@@ -21,6 +21,6 @@ public class Topping extends RollDecorator
 
     public String getRollType()
     {
-        return (roll.getRollType());
+        return roll.getRollType();
     }
 }

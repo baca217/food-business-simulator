@@ -1,5 +1,7 @@
 package rolls;
 
+import java.util.List;
+
 public class Filling extends RollDecorator
 {
     Roll roll;
@@ -21,6 +23,6 @@ public class Filling extends RollDecorator
 
     public String getRollType()
     {
-        return (roll.getRollType());
+        return roll.getRollType();
     }
 }

@@ -36,4 +36,23 @@ public class InitData
         }
         return tempMap;
     }
+
+    public HashMap<String, Double> customerPayments()
+    {
+        BusinessCustomer b = new BusinessCustomer();
+        CasualCustomer cas = new CasualCustomer();
+        CateringCustomer cat = new CateringCustomer();
+        List<Customer> customers = Arrays.asList(b, cas, cat);
+        HashMap<String, Double> tempMap = new HashMap<>();
+
+        for(Customer customer: customers)
+        {
+            String name = customer.getClass().getSimpleName();
+            if(!tempMap.containsKey(name))
+            {
+                tempMap.put(name, 0.0);
+            }
+        }
+        return tempMap;
+    }
 }

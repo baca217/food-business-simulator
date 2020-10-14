@@ -3,34 +3,63 @@ package customers;
 import shops.RollStore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
 public class CasualCustomer extends Customer{
+    int numRolls;
+    List<String> myOrder;
     @Override
-    protected List<String> rollOrders(RollStore myStore) {
+    public List<String> firstOrder(List<String> menu)
+    {
+        int i, j;
         Random rand = new Random();
-        List<String> rollOptions = myStore.menu();
-        List<String> order = new ArrayList<>();
-        int rollOrderSize;
-        int availableRolls = getNumberOfAvailable(myStore);
-        rollOrderSize = rand.nextInt(3) + 1;
+        this.numRolls = rand.nextInt(3) + 1;
+        myOrder = new ArrayList<>();
 
-        if(availableRolls < rollOrderSize) { //number of rolls available is less than amount that we want
-            System.out.println("casual customer reduced order from "+rollOrderSize+" to "+availableRolls);
-            rollOrderSize = availableRolls;
+        for(i = 0; i < this.numRolls; i++)
+        {
+            j = rand.nextInt(menu.size()); //random item from menu
+            String item = menu.get(j); //get random item from menu
+            myOrder.add(item+addToppings());
         }
+        return myOrder;
+    }
+    @Override
+    public List<String> secondOrder(List<String> canFulfill, List<String> menu, HashMap<String, Integer> inventory)
+    {
+        int needToOrder = myOrder.size() - canFulfill.size(); // difference between items we wanted and can be fulfilled
+        int totRolls = 0;
+        Random rand = new Random();
 
-        int i = 0;
-        while(i < rollOrderSize) {
-            int rollToOrder = rand.nextInt(rollOptions.size());
-            if(myStore.getInventory(rollOptions.get(rollToOrder)) > 0) { //checking if random roll has any inventory available
-                order.add(rollOptions.get(rollToOrder) + addToppings());
-                i++;
+        for(String order: canFulfill) //remove stuff that we already ordered from inventory
+        {
+            String type = order.split(",")[0].trim().toLowerCase();
+            inventory.put(type, inventory.get(type) - 1);
+        }
+        for(String roll: menu) //get total amount of rolls we can buy
+        {
+            if(inventory.get(roll) > 0) {
+                totRolls += inventory.get(roll);
+            }
+        }
+        if( totRolls < needToOrder) //is there less rolls than what we want to order?
+        {
+            needToOrder = totRolls; //reduce amount of rolls we can order
+        }
+        while(needToOrder > 0)
+        {
+            int randType = rand.nextInt(menu.size()); //random number for picking random item
+            String type = menu.get(randType); //pick random item
+            if(inventory.get(type) > 0) //check if that type is available
+            {
+                canFulfill.add(type+addToppings()); //add it to our old order
+                needToOrder--;
             }
         }
 
-        return order;
+        return canFulfill;
     }
 
 }

@@ -21,6 +21,6 @@ public class Sauce extends RollDecorator
 
     public String getRollType()
     {
-        return (roll.getRollType());
+        return roll.getRollType();
     }
 }

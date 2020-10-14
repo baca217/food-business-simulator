@@ -4,38 +4,26 @@ import rolls.Roll;
 import shops.RollStore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class BusinessCustomer extends Customer {
     @Override
-    protected List<String> rollOrders(RollStore myStore) {
-        List<String> order = new ArrayList<>();
-
-        if(getNumberOfAvailable(myStore) == -1) return new ArrayList<>();
-
-        for(String roll : myStore.menu()) {
-            for(int i = 0; i < 2; i++) {
-                String individualOrder = roll + addToppings();
-                order.add(individualOrder);
-            }
+    public List<String> firstOrder(List<String> menu)
+    {
+        List<String> myOrder = new ArrayList<>();
+        for(String item: menu)
+        {
+            myOrder.add(item+addToppings());
+            myOrder.add(item+addToppings());
         }
-
-        return order;
+        return myOrder;
     }
-
     @Override
-    public int getNumberOfAvailable(RollStore myStore) {
-        int count = 0;
-        List<String> menu = myStore.menu();
-        for (String s : menu) {
-            if(myStore.getInventory(s) < 2) {
-                return -1;
-            }
-
-            count++;
-        }
-
-        return count;
+    public List<String> secondOrder(List<String> canFulfill, List<String> menu, HashMap<String, Integer> inventory)
+    {
+        System.out.println("Business customer ordered nothing!!!");
+        return new ArrayList<>();
     }
 
 }

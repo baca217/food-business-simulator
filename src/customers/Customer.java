@@ -11,6 +11,7 @@ import rolls.SpringRoll;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
@@ -19,30 +20,8 @@ abstract public class Customer implements PropertyChangeListener
     protected boolean isStoreOpen = false;
     List<Roll> myRolls = new ArrayList<>();
 
-    public int getNumberOfAvailable(RollStore myStore) {
-        int count = 0;
-        List<String> menu = myStore.menu();
-        for (String s : menu) {
-            count += myStore.getInventory(s);
-        }
-
-        return count;
-    }
-
-    protected abstract List<String> rollOrders(RollStore myStore);
-
-    public List<String> arriveAndOrder(RollStore myStore)
-    {
-        if(isStoreOpen)
-        {
-            List<String> temp =  rollOrders(myStore); //get order
-            return temp; //return so store can update
-        }
-        else
-        {
-            return new ArrayList<>();
-        }
-    }
+    public abstract List<String>  firstOrder(List<String> menu);
+    public abstract List<String> secondOrder(List<String> canFulfill, List<String> menu, HashMap<String, Integer> inventory);
 
     public String addToppings(){
         Random rand = new Random();
@@ -80,9 +59,45 @@ abstract public class Customer implements PropertyChangeListener
         }
     }
 
-    public List<Roll> rollTypesBought()
+    public void receive(List<Roll> storeRolls)
     {
-        return myRolls;
+        HashMap<String, Integer> temp = new HashMap<String, Integer>();
+        List<String> rollTypes = new ArrayList<>();
+        myRolls = storeRolls;
+        double cost = 0;
+
+        for(Roll roll: myRolls)
+        {
+            String type = roll.getRollType();
+            cost += roll.cost();
+            if(!temp.containsKey(type))
+            {
+                temp.put(type, 1);
+                rollTypes.add(type);
+            }
+            else {
+                    temp.put(type, temp.get(type)+1 );
+            }
+        }
+        for(String type: rollTypes)
+        {
+            System.out.println(type+" amount: "+temp.get(type));
+        }
+        System.out.println("Total cost: $"+cost);
     }
 
+    public boolean checkIfOpen()
+    {
+        return isStoreOpen;
+    }
+
+    public double totalCost()
+    {
+        double cost = 0;
+        for(Roll roll: myRolls)
+        {
+            cost += roll.cost();
+        }
+        return cost;
+    }
 }

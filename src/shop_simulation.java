@@ -1,4 +1,5 @@
 import customers.*;
+import rolls.Roll;
 import shops.*;
 import tests.*;
 import initialization.*;
@@ -8,9 +9,9 @@ import java.util.*;
 public class shop_simulation {
     public static void main(String[] args)
     {
-        rollTests rTest = new rollTests();
-        storeTests sTest = new storeTests();
-        customerTests cTest = new customerTests();
+        //rollTests rTest = new rollTests();
+        //storeTests sTest = new storeTests();
+        //customerTests cTest = new customerTests();
 
         ColoradoRollStore myStore = new ColoradoRollStore();
 
@@ -21,25 +22,6 @@ public class shop_simulation {
         InitData initializer = new InitData();
         PrintData printer = new PrintData();
         Random rand = new Random();
-        HashMap<String, Integer> rollSales = initializer.rollSellsMap(myStore.menu());
-
-
-        //cTest.customerOrderTest();
-        //cTest.failOrderTest();
-        //sTest.customerOrders();
-        //cTest.testRollsList();
-
-        /*
-        rTest.rollInstantiate();
-        rTest.rollDecorator();
-
-        sTest.storeInstantiate();
-        sTest.storeSell();
-        sTest.storeOpen();
-        sTest.noRollRefill();
-        sTest.storeInput();
-        sTest.storeExtras();
-        */
 
         for(i = 0; i < days; i++)
         {
@@ -58,11 +40,18 @@ public class shop_simulation {
             {
                 randNum = rand.nextInt(customers.size());
                 tempCust = customers.get(randNum);//get random customer
+                String name = tempCust.getClass().getSimpleName();
                 customers.remove(randNum); //remove customer from the list
-                System.out.println("Customer type:"+tempCust.getClass().getSimpleName());
-                myStore.rollOrders(tempCust.arriveAndOrder(myStore)); //customer came and ordered
+                List<Roll> rolls = myStore.serviceCustomer(tempCust);
+                System.out.println("<<<<Customer type:"+tempCust.getClass().getSimpleName()+">>>>");
+                tempCust.receive(rolls);
             }
             myStore.printInventory();
+            myStore.printDailySales();
+            myStore.printDailyOutages();
         }
+        myStore.printEndSales();
+        myStore.printRollsSold();
+        myStore.printTotalOutages();
     }
 }
