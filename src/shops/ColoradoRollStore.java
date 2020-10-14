@@ -135,6 +135,4 @@ public class ColoradoRollStore extends RollStore
         }
         return rolls;
     }
-
-
 }
